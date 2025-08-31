@@ -1,4 +1,5 @@
 import './App.css';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   const handleContextMenu = (e: React.MouseEvent) => {
@@ -26,6 +27,7 @@ function App() {
           draggable={false}
         />
       </div>
+      <SpeedInsights />
     </div>
   );
 }
