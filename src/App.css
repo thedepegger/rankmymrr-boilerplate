@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.logo {
+  max-width: 300px;
+  width: 90%;
+  height: auto;
+  animation: smoothZoom 1.5s ease forwards;
+  transform-origin: center center;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: auto;
+  will-change: transform, opacity;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+@keyframes smoothZoom {
+  0% {
+    transform: scale(0.6) translateZ(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.1) translateZ(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+  }
+}
+
+/* Tablet devices */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 250px;
+  }
+}
+
+/* Mobile devices - landscape */
+@media (max-width: 640px) {
+  .logo {
+    max-width: 200px;
+  }
+}
+
+/* Mobile devices - portrait */
+@media (max-width: 480px) {
+  .logo {
+    max-width: 150px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .logo {
+    max-width: 120px;
+  }
+}

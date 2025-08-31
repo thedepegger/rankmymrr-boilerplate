@@ -1,0 +1,2 @@
+Please add your logo file here as "logo.png" in the public folder.
+The landing page will display this logo in the center with a zoom animation.
